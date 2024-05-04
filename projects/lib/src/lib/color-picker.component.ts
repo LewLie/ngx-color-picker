@@ -891,7 +891,7 @@ export class ColorPickerComponent implements OnInit, OnDestroy, AfterViewInit {
     }
   }
 
-  private updateColorPicker(emit: boolean = true, update: boolean = true, cmykInput: boolean = false): void {
+  updateColorPicker(emit: boolean = true, update: boolean = true, cmykInput: boolean = false): void {
     if (this.sliderDimMax) {
       if (this.cpColorMode === 2) {
         this.hsva.s = 0;
