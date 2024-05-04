@@ -127,7 +127,7 @@
     </div>
   </div>
 
-  <div *ngIf="!cpDisableInput && (cpColorMode || 1) === 1" class="type-policy" [style.top]="cpPresetColors?.length > 0 ? (cpPresetColors?.length > 10 ? '370' : '347') : '268'">
+  <div *ngIf="!cpDisableInput && (cpColorMode || 1) === 1" class="type-policy" [style.top.px]="(cpPresetColors?.length > 0 ? (cpPresetColors?.length > 10 ? 350 : 327) : 258) + (cpPolicyOffset || 0)">
     <span class="type-policy-arrow" (click)="onFormatToggle(-1)"></span>
     <span class="type-policy-arrow" (click)="onFormatToggle(1)"></span>
   </div>

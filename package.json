@@ -1,7 +1,6 @@
 {
-  "name": "ngx-color-picker",
-  "description": "Color picker widget for Angular",
-  "bugs": "https://github.com/zefoy/ngx-color-picker/issues",
+  "name": "wirlie-ngx-color-picker",
+  "description": "Fork of zefoy/ngx-color-picker",
   "version": "16.0.0",
   "license": "MIT",
   "private": true,
@@ -15,13 +14,9 @@
     "publish": "npm publish ./dist/lib",
     "predeploy": "rimraf ./dist/app && mkdirp ./dist/app"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/zefoy/ngx-color-picker.git"
-  },
   "config": {
     "deployToGit": {
-      "repository": "git@github.com:zefoy/ngx-color-picker.git",
+      "repository": "git@github.com:LewLie/ngx-color-picker.git",
       "branch": "gh-pages",
       "folder": "dist/app",
       "script": "ng build app --configuration production --base-href=ngx-color-picker --delete-output-path=false",

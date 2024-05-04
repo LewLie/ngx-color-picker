@@ -1,8 +1,7 @@
 {
-  "name": "ngx-color-picker",
-  "description": "Color picker widget for Angular",
-  "bugs": "https://github.com/zefoy/ngx-color-picker/issues",
-  "version": "16.0.0",
+  "name": "wirliefork-ngx-color-picker",
+  "description": "Fork of zefoy/ngx-color-picker",
+  "version": "16.0.3",
   "license": "MIT",
   "peerDependencies": {
     "@angular/common": ">=9.0.0",

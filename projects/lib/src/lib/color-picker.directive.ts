@@ -85,6 +85,7 @@ export class ColorPickerDirective implements OnChanges, OnDestroy {
   @Input() cpArrowPosition: number = 0;
 
   @Input() cpExtraTemplate: TemplateRef<any>;
+  @Input() cpPolicyOffset: number;
 
   @Output() cpInputChange = new EventEmitter<{input: string, value: number | string, color: string}>(true);
 
@@ -218,7 +219,7 @@ export class ColorPickerDirective implements OnChanges, OnDestroy {
         this.cpOKButtonText, this.cpCancelButton, this.cpCancelButtonClass,
         this.cpCancelButtonText, this.cpAddColorButton, this.cpAddColorButtonClass,
         this.cpAddColorButtonText, this.cpRemoveColorButtonClass, this.cpEyeDropper, this.elRef,
-        this.cpExtraTemplate);
+        this.cpExtraTemplate, this.cpPolicyOffset);
 
       this.dialog = this.cmpRef.instance;
 

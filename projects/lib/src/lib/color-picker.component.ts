@@ -142,6 +142,8 @@ export class ColorPickerComponent implements OnInit, OnDestroy, AfterViewInit {
 
   public cpExtraTemplate: TemplateRef<any>;
 
+  public cpPolicyOffset: number;
+
   @ViewChild('dialogPopup', { static: true }) dialogElement: ElementRef;
 
   @ViewChild('hueSlider', { static: true }) hueSlider: ElementRef;
@@ -245,7 +247,8 @@ export class ColorPickerComponent implements OnInit, OnDestroy, AfterViewInit {
     cpOKButtonText: string, cpCancelButton: boolean, cpCancelButtonClass: string,
     cpCancelButtonText: string, cpAddColorButton: boolean, cpAddColorButtonClass: string,
     cpAddColorButtonText: string, cpRemoveColorButtonClass: string, cpEyeDropper: boolean,
-    cpTriggerElement: ElementRef, cpExtraTemplate: TemplateRef<any>): void
+    cpTriggerElement: ElementRef, cpExtraTemplate: TemplateRef<any>,
+    cpPolicyOffset: number): void
   {
     this.setInitialColor(color);
 
@@ -318,6 +321,8 @@ export class ColorPickerComponent implements OnInit, OnDestroy, AfterViewInit {
     {
       this.cpAlphaChannel = 'disabled';
     }
+
+    this.cpPolicyOffset = cpPolicyOffset
   }
 
   public setColorMode(mode: string): void {
