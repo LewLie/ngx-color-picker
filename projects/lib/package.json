@@ -1,7 +1,7 @@
 {
   "name": "wirliefork-ngx-color-picker",
   "description": "Fork of zefoy/ngx-color-picker",
-  "version": "16.0.3",
+  "version": "16.0.4",
   "license": "MIT",
   "peerDependencies": {
     "@angular/common": ">=9.0.0",

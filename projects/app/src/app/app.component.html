@@ -1,7 +1,7 @@
 <div class="container">
   <br>
 
-  <h1>Angular Color Picker Directive</h1>
+  <h1>Angular Color Picker Directivex</h1>
   <h4>A Color Picker Directive for Angular with no dependencies.</h4>
   <h4><b>based on angular2-color-picker by Alberto Pujante</b></h4>
 
@@ -11,7 +11,7 @@
 
   <div class="row">
     <div class="col-md-5">
-      <input [cpPolicyOffset]="10" [cpPosition]="'bottom'" [cpPresetColors]="[]" [style.background]="color1" [(colorPicker)]="color1" (colorPickerOpen)="onEventLog('colorPickerOpen', $event)" (colorPickerClose)="onEventLog('colorPickerClose', $event)" (cpInputChange)="onEventLog('cpInputChange', $event)" (cpSliderDragStart)="onEventLog('cpSliderDragStart', $event)" (cpSliderDragEnd)="onEventLog('cpSliderDragEnd', $event)" cpWidth="240px" cpAlphaChannel="disabled" />
+      <input [cpPosition]="'bottom'" [cpPresetColors]="['#DDDDDD', '#AA22AA']" [style.background]="color1" [(colorPicker)]="color1" (colorPickerOpen)="onEventLog('colorPickerOpen', $event)" (colorPickerClose)="onEventLog('colorPickerClose', $event)" (cpInputChange)="onEventLog('cpInputChange', $event)" (cpSliderDragStart)="onEventLog('cpSliderDragStart', $event)" (cpSliderDragEnd)="onEventLog('cpSliderDragEnd', $event)" cpWidth="240px" cpAlphaChannel="disabled" />
     </div>
 
     <div class="col-md-7">

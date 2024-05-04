@@ -4,16 +4,16 @@
   <div>
     <div class="text-label"><b>Colores de Discord</b></div>
     <div class="color-buttons">
-      <span class="color-btn dc1" (click)="onHexInput('#ffffff'); updateColorPicker()" style="background-color: #ffffff;"></span>
-      <span class="color-btn dc1" (click)="onHexInput('#607d8a'); updateColorPicker()" style="background-color: #607d8a;"></span>
-      <span class="color-btn dc1" (click)="onHexInput('#ff7673'); updateColorPicker()" style="background-color: #ff7673;"></span>
-      <span class="color-btn dc1" (click)="onHexInput('#ffbb5c'); updateColorPicker()" style="background-color: #ffbb5c;"></span>
-      <span class="color-btn dc1" (click)="onHexInput('#ffd74e'); updateColorPicker()" style="background-color: #ffd74e;"></span>
-      <span class="color-btn dc1" (click)="onHexInput('#6de194'); updateColorPicker()" style="background-color: #6de194;"></span>
-      <span class="color-btn dc1" (click)="onHexInput('#63ecdb'); updateColorPicker()" style="background-color: #63ecdb;"></span>
-      <span class="color-btn dc1" (click)="onHexInput('#5acff5'); updateColorPicker()" style="background-color: #5acff5;"></span>
-      <span class="color-btn dc1" (click)="onHexInput('#70b1ff'); updateColorPicker()" style="background-color: #70b1ff;"></span>
-      <span class="color-btn dc1" (click)="onHexInput('#b072ff'); updateColorPicker()" style="background-color: #b072ff;"></span>
+      <span class="color-btn dc1" (click)="onHexInput('#ffffff'); updateColorPicker()" style="background-color: #ffffff;" [class.selected]="hexText.toLowerCase() === '#ffffff'" [style.outline-color]="hexText"></span>
+      <span class="color-btn dc1" (click)="onHexInput('#607d8a'); updateColorPicker()" style="background-color: #607d8a;" [class.selected]="hexText.toLowerCase() === '#607d8a'" [style.outline-color]="hexText"></span>
+      <span class="color-btn dc1" (click)="onHexInput('#ff7673'); updateColorPicker()" style="background-color: #ff7673;" [class.selected]="hexText.toLowerCase() === '#ff7673'" [style.outline-color]="hexText"></span>
+      <span class="color-btn dc1" (click)="onHexInput('#ffbb5c'); updateColorPicker()" style="background-color: #ffbb5c;" [class.selected]="hexText.toLowerCase() === '#ffbb5c'" [style.outline-color]="hexText"></span>
+      <span class="color-btn dc1" (click)="onHexInput('#ffd74e'); updateColorPicker()" style="background-color: #ffd74e;" [class.selected]="hexText.toLowerCase() === '#ffd74e'" [style.outline-color]="hexText"></span>
+      <span class="color-btn dc1" (click)="onHexInput('#6de194'); updateColorPicker()" style="background-color: #6de194;" [class.selected]="hexText.toLowerCase() === '#6de194'" [style.outline-color]="hexText"></span>
+      <span class="color-btn dc1" (click)="onHexInput('#63ecdb'); updateColorPicker()" style="background-color: #63ecdb;" [class.selected]="hexText.toLowerCase() === '#63ecdb'" [style.outline-color]="hexText"></span>
+      <span class="color-btn dc1" (click)="onHexInput('#5acff5'); updateColorPicker()" style="background-color: #5acff5;" [class.selected]="hexText.toLowerCase() === '#5acff5'" [style.outline-color]="hexText"></span>
+      <span class="color-btn dc1" (click)="onHexInput('#70b1ff'); updateColorPicker()" style="background-color: #70b1ff;" [class.selected]="hexText.toLowerCase() === '#70b1ff'" [style.outline-color]="hexText"></span>
+      <span class="color-btn dc1" (click)="onHexInput('#b072ff'); updateColorPicker()" style="background-color: #b072ff;" [class.selected]="hexText.toLowerCase() === '#b072ff'" [style.outline-color]="hexText"></span>
     </div>
   </div>
 
@@ -21,7 +21,7 @@
     <div class="text-label"><b>Historial</b></div>
 
     <div *ngIf="cpPresetColors?.length" class="{{cpPresetColorsClass}} color-buttons">
-      <div *ngFor="let color of cpPresetColors" class="color-btn" [style.backgroundColor]="color" (click)="setColorFromString(color)">
+      <div *ngFor="let color of cpPresetColors" class="color-btn" [style.backgroundColor]="color" (click)="setColorFromString(color)" [class.selected]="hexText.toLowerCase() === color.toLowerCase()" [style.outline-color]="color">
         <span style="display: none;" *ngIf="cpAddColorButton" class="{{cpRemoveColorButtonClass}}" (click)="onRemovePresetColor($event, color)"></span>
       </div>
     </div>

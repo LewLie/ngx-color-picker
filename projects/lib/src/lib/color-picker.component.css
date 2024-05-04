@@ -36,7 +36,17 @@
   border-radius: 50%;
   cursor: pointer;
   margin-right: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 5px; 
+}
+
+.color-picker .color-buttons .color-btn.selected {
+  outline: 2px solid rgba(255,255,255,0.5);
+  border: 2px solid rgba(0,0,0,0.8); 
+  outline-offset: 0px;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAa0lEQVR4nK3QMQ6CUACDYUxYcCAkht2B0SMweBsOxEkcHHXwDI4kDJi4e4GP9SXCewx0bP40bbNsLyHfAjV4o4xBZ4zoQrNdSJrQh+YBd9xQB9Djrx8KPPHFBwNOa52OeOGHS2plhWvyjphmq31p6VC696EAAAAASUVORK5CYII=');
+  background-size: 10px 10px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .color-picker * {
